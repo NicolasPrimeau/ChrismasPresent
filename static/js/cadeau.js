@@ -2,8 +2,8 @@
 
 $(document).ready(function(){
 
-    var maxClicks = 10;
-    var minTimer = 1000;
+    var maxClicks = 5;
+    var minTimer = 2000;
     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
     var setRandom = function() {
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
         if (maxClicks > 0) {
             setRandom()
-            var waitTime = minTimer * Math.random() * 2
+            var waitTime = minTimer * Math.random()
             setTimeout(deballe, waitTime);
         } else {
             setTimeout(redirect, 1000);
@@ -38,5 +38,5 @@ $(document).ready(function(){
     }
     vibrate()
     alert("Si t'es épileptique, regarde pas")
-    setTimeout(deballe, 5000);
+    setTimeout(deballe, 2500);
 });
